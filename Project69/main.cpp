@@ -1,16 +1,16 @@
+#include "transport.h"
 #include "car.h"
 #include "bus.h"
 #include "truck.h"
 
 int main() {
-	Car car1(50, 200, 1600);
-	Car car1(60, 240, 2000);
-	Car car1(40, 160, 1200);
+	Transport* transport = new Transport();
 
-	Bus bus(200, 50);
+	transport = new Car();
+	delete transport;
 
-	Truck truck(300, 20000);
-	Truck truck(350, 25000);
+	transport = new Bus();
+	delete transport;
 
-
+	transport = new Truck();
 }
